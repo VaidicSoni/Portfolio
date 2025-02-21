@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    
+    <header class="header">
+        <a href="#" class="logo"><span>Vaidic Soni</span></a>
+
+        <ul class="nav-links">
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <button class="visit-btn">Visit Github</button> 
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="Image.jpg" alt="">
+
+            <div class="info-box">
+                
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Vaidic Soni</h1>
+                    <span>Software Developer</span>
+                </div>
+            
+                <div class="btn-group">
+                    <div class="btn">Download CV</div>
+                    <div class="btn">Contact</div>
+                </div>
+
+                <div class="socials">
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <i class="devicon-python-plain colored" title="Python"></i>
+            <i class="devicon-cplusplus-plain colored" title="C++"></i>
+            <i class="devicon-git-plain colored" title="Git"></i>
+            <i class="devicon-vscode-plain colored" title="VS Code"></i>
+            <i class="devicon-github-original colored" title="GitHub"></i>
+            <i class="devicon-java-plain colored" title="Java"></i>
+            <i class="devicon-html5-plain colored" title="HTML5"></i>
+            <i class="devicon-css3-plain colored" title="CSS3"></i>
+            <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+            <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+        </div>
+    </section>
+    
+
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+
+
+        <div class="experience-info">
+
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Resident Assistant</span>
+                    <h3>1 year</h3>
+                    <p>Served as a primary resource for students in the residence hall, 
+                        resolved conflicts and enforced policies, 
+                        created a welcoming environment.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-info"></i>
+                    <span>Info Desk Assistant</span>
+                    <h3>4 months</h3>
+                    <p>Assisted with data entry, filing, and preparing documents, provided accurate information 
+                        about the organization's services and facilities.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-chalkboard"></i>
+                    <span>Teaching Assistant</span>
+                    <h3>1 year</h3>
+                    <p>Taught Mathematics and Science to 150+ students, 
+                        introduced high schoolers to programming basics, 
+                        trained teachers on Google Suite with Fliplearn, and 
+                        created a 3000+ student broadcast list using Excel.</p>
+                </div>
+            </div>
+
+            <img src="Image2.png" alt="">
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Recent Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="Picture_1.jpg" alt="">
+                <h3>Project X</h3>
+                <p>Project Description</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+                    
+            <div class="project-card">
+                <img src="Picture_2.jpg" alt="">
+                <h3>Project Y</h3>
+                <p>Project Description</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="Picture_3.jpg" alt="">
+                <h3>Project Z</h3>
+                <p>Project Description</p>
+                <div class="btn-group">
+                    <div class="btn">Live Demo</div>
+                    <div class="btn">Github Repo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <i class="fa-solid fa-comment"></i>
+                </div>
+                <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+
+        <ul>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <p class="copyright">© All rights reserved | Vaidic Soni</p>
+    </footer>
+
+    <script src="script.js"></script>   
+</body>
+</html>

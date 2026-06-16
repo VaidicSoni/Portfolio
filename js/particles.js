@@ -2,7 +2,7 @@
 (function() {
   const c = document.getElementById('particles');
   if (!c) return;
-  for (let i = 0; i < 28; i++) {
+  for (let i = 0; i < 50; i++) {
     const p = document.createElement('div');
     p.className = 'particle';
     const s = Math.random() * 2.5 + 1;

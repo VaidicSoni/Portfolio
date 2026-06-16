@@ -80,6 +80,7 @@ nav.scrolled {
 .nav-links li:nth-child(4) { animation: fade-in 0.4s ease 0.94s both; }
 .nav-links li:nth-child(5) { animation: fade-in 0.4s ease 1.02s both; }
 .nav-links li:nth-child(6) { animation: fade-in 0.4s ease 1.10s both; }
+.nav-links li:nth-child(7) { animation: fade-in 0.4s ease 1.18s both; }
 
 .nav-links a {
   font-family: var(--font-mono);

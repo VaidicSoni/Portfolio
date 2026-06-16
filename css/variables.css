@@ -1,0 +1,25 @@
+/* variables.css — Design tokens (colors, fonts, spacing) */
+
+:root {
+  /* Background layers */
+  --bg:       #080a10;
+  --bg2:      #0e1119;
+  --bg3:      #141822;
+
+  /* Borders */
+  --border:   #1e2535;
+  --border2:  #2a3448;
+
+  /* Text */
+  --text:     #c4cfe6;
+  --muted:    #5a6a85;
+  --grey:     #8a96aa;
+
+  /* Accent */
+  --accent:   #5b8db8;
+  --accent2:  #7ab0d4;
+
+  /* Typography */
+  --font-disp: 'Space Grotesk', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}

@@ -1,0 +1,9 @@
+/* achievements.css — Awards grid */
+
+.ach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+.ach-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 1.75rem; transition: border-color 0.2s, background 0.2s; position: relative; overflow: hidden; }
+.ach-card:hover { border-color: var(--border2); background: var(--bg3); }
+.ach-card::after { content: attr(data-num); position: absolute; bottom: -1rem; right: 0.75rem; font-size: 5rem; font-weight: 700; color: var(--border); line-height: 1; pointer-events: none; user-select: none; font-family: var(--font-mono); }
+.ach-org { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+.ach-title { font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 0.5rem; line-height: 1.35; }
+.ach-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.7; }

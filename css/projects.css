@@ -1,0 +1,17 @@
+/* projects.css — Projects grid and cards */
+
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; grid-auto-rows: 1fr; }
+.project-card { background: var(--bg2); border: 1px solid var(--border); padding: 2rem; border-radius: 6px; display: flex; flex-direction: column; transition: border-color 0.25s, box-shadow 0.25s; position: relative; overflow: hidden; }
+.project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0; transition: opacity 0.3s; }
+.project-card:hover { border-color: var(--border2); box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5); }
+.project-card:hover::before { opacity: 1; }
+.project-num { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; color: var(--border2); margin-bottom: 0.85rem; }
+.project-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.18rem 0.6rem; border-radius: 3px; margin-bottom: 0.85rem; color: var(--accent2); background: rgba(91, 141, 184, 0.1); border: 1px solid rgba(91, 141, 184, 0.25); }
+.project-name { font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+.project-desc { font-size: 0.855rem; color: var(--muted); line-height: 1.78; flex: 1; margin-bottom: 1.5rem; }
+.project-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.stack-chip { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.05em; color: var(--grey); background: var(--bg3); border: 1px solid var(--border); padding: 0.18rem 0.55rem; border-radius: 3px; }
+.project-link { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: var(--muted); border: 1px solid var(--border); padding: 0.28rem 0.7rem; border-radius: 3px; transition: color 0.2s, border-color 0.2s, background 0.2s; margin-top: auto; align-self: flex-start; }
+.project-link:hover { color: var(--accent2); border-color: var(--accent); background: rgba(91, 141, 184, 0.07); }
+.project-link svg { width: 12px; height: 12px; fill: currentColor; }
+.project-footer { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; margin-top: auto; }

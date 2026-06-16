@@ -1,0 +1,25 @@
+/* skills.css — Skills section and infinite scrolling orbits */
+
+.skills-categories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.75rem 5rem; }
+.skill-category-title { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+.cat-lang .skill-category-title { color: var(--accent2); }
+.cat-frame .skill-category-title { color: #7ab8d4; }
+.cat-tools .skill-category-title { color: var(--grey); }
+.cat-concepts .skill-category-title { color: #6a9ab8; }
+.orbit-track { position: relative; overflow: hidden; height: 60px; -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%); }
+.orbit-pad { padding: 5px 0; }
+.orbit-inner { display: flex; gap: 0.7rem; align-items: center; position: absolute; white-space: nowrap; top: 5px; animation: scroll-left 22s linear infinite; }
+.orbit-inner.rev { animation-direction: reverse; animation-duration: 26s; }
+
+@keyframes scroll-left { 
+  from { transform: translateX(0); } 
+  to { transform: translateX(-50%); } 
+}
+
+.skill-bubble { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; flex-shrink: 0; background: var(--bg3); border: 1px solid var(--border2); border-radius: 8px; padding: 0.5rem; transition: border-color 0.2s, background 0.2s, box-shadow 0.2s; cursor: default; }
+.skill-bubble img { width: 22px; height: 22px; object-fit: contain; display: block; pointer-events: none; filter: brightness(1.1) saturate(1.1); }
+.skill-bubble img.invert { filter: invert(1) brightness(0.85); }
+.cat-lang .skill-bubble:hover { border-color: var(--accent2); box-shadow: 0 0 10px rgba(91, 141, 184, 0.3); background: var(--bg2); }
+.cat-frame .skill-bubble:hover { border-color: #7ab8d4; box-shadow: 0 0 10px rgba(122, 184, 212, 0.25); background: var(--bg2); }
+.cat-tools .skill-bubble:hover { border-color: var(--grey); box-shadow: 0 0 10px rgba(138, 150, 170, 0.25); background: var(--bg2); }
+.cat-concepts .skill-bubble:hover { border-color: #6a9ab8; box-shadow: 0 0 10px rgba(106, 154, 184, 0.25); background: var(--bg2); }

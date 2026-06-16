@@ -4,34 +4,12 @@
 .bg-canvas::before { 
   content: ''; 
   position: absolute; 
-  /* -25% is plenty big enough for subtle movements */
-  inset: -25%; 
+  /* Reset back to 0 since it's no longer moving */
+  inset: 0; 
   background: radial-gradient(ellipse 60% 50% at 80% 10%, rgba(60, 100, 160, 0.18) 0%, transparent 70%), 
               radial-gradient(ellipse 50% 40% at 10% 80%, rgba(40, 70, 120, 0.14) 0%, transparent 70%), 
               radial-gradient(ellipse 40% 35% at 50% 50%, rgba(30, 50, 90, 0.10) 0%, transparent 60%); 
-  /* Stretched to 30 seconds for a very slow, relaxing shift */
-  animation: blob-shift 30s ease-in-out infinite alternate; 
-}
-
-/* Subtle, gentle keyframes */
-@keyframes blob-shift {
-  0% { 
-    opacity: 0.7; 
-    transform: scale(1) translate(0, 0); 
-  }
-  33% { 
-    opacity: 0.8; 
-    /* Tiny 2-3% drifts instead of massive swings */
-    transform: scale(1.05) translate(3%, 2%); 
-  }
-  66% { 
-    opacity: 0.75; 
-    transform: scale(0.98) translate(-2%, 3%); 
-  }
-  100% { 
-    opacity: 0.7; 
-    transform: scale(1.02) translate(1%, -2%); 
-  }
+  /* The animation line has been completely removed */
 }
 
 .bg-canvas::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(91, 141, 184, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(91, 141, 184, 0.05) 1px, transparent 1px); background-size: 48px 48px; }

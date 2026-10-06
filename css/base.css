@@ -1,7 +1,7 @@
 /* base.css — Body defaults, sections, shared utilities */
 
 body {
-  background: var(--bg);
+  background: linear-gradient(180deg, #0f1216 0%, var(--bg) 60%) fixed, var(--bg);
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 16px;
@@ -22,9 +22,9 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(38% 32% at 72% 18%, rgba(184, 242, 92, 0.09), transparent 70%),
-    radial-gradient(34% 30% at 18% 55%, rgba(72, 196, 214, 0.07), transparent 70%),
-    radial-gradient(30% 26% at 85% 85%, rgba(184, 242, 92, 0.05), transparent 70%);
+    radial-gradient(45% 40% at 75% 15%, rgba(184, 242, 92, 0.20), transparent 70%),
+    radial-gradient(40% 38% at 12% 50%, rgba(72, 196, 214, 0.16), transparent 70%),
+    radial-gradient(38% 34% at 80% 88%, rgba(120, 140, 255, 0.12), transparent 70%);
   animation: glow-drift 30s ease-in-out infinite alternate;
   will-change: transform;
 }

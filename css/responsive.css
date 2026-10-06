@@ -1,62 +1,90 @@
 /* responsive.css — Media queries for smaller screens */
 
-@media (max-width: 768px) {
-  nav { padding: 0 1.25rem; }
-  .nav-meta { display: none; }
-  
+@media (max-width: 960px) {
+  /* Nav collapses into a dropdown */
   .mobile-menu-btn {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 201;
+    justify-content: center;
+    gap: 6px;
+    width: 36px;
+    height: 36px;
+    margin-right: -6px;
+    align-items: center;
   }
   .mobile-menu-btn span {
     display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--accent2);
-    transition: 0.3s;
-    border-radius: 2px;
+    width: 20px;
+    height: 1.5px;
+    background: var(--text);
+    transition: transform 0.25s;
   }
-  .mobile-menu-btn.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .mobile-menu-btn.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .mobile-menu-btn.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
+  .mobile-menu-btn.active span:nth-child(1) { transform: translateY(3.75px) rotate(45deg); }
+  .mobile-menu-btn.active span:nth-child(2) { transform: translateY(-3.75px) rotate(-45deg); }
 
   .nav-links {
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 250px;
-    height: 100vh;
-    background: rgba(8, 10, 16, 0.98);
-    backdrop-filter: blur(10px);
-    border-left: 1px solid var(--border);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-    z-index: 200;
-  }
-  .nav-links.active {
+    top: var(--nav-h);
+    left: 0;
     right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.25rem var(--gutter) 1rem;
+    background: rgba(10, 11, 13, 0.97);
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
   }
-  
-  section { padding: 3.5rem 1.25rem; }
-  #hero { padding: 7rem 1.25rem 3rem; }
-  .robot-wrap { display: none; }
-  .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
-  .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .skills-categories { grid-template-columns: 1fr; }
-  .ach-grid { grid-template-columns: 1fr; }
+  .nav-links.active { opacity: 1; visibility: visible; transform: none; }
+  .nav-links a { display: block; padding: 0.8rem 0; font-size: 0.85rem; border-bottom: 1px solid var(--border); }
+  .nav-links li:last-child a { border-bottom: none; }
+
+  .hero { grid-template-columns: 1fr 260px; gap: 3rem; }
+  .ach-grid { grid-template-columns: repeat(2, 1fr); }
+  .ach-card:last-child { grid-column: auto; }
+  .ach-card:last-child:nth-child(odd) { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+  :root { --gutter: 1.25rem; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding-top: calc(var(--nav-h) + 3rem);
+    gap: 2.5rem;
+  }
+  .hero-photo { max-width: 340px; }
+  .hero-role span { display: block; }
+  .hero-role .sep { display: none; }
+
+  section { padding-top: 4rem; }
+
+  .exp-item,
+  .skill-row { grid-template-columns: 1fr; gap: 0.6rem; }
+  .exp-left { display: flex; flex-wrap: wrap; gap: 0 0.75rem; }
+  .exp-location { margin-top: 0; }
+
+  .project-list { grid-template-columns: 1fr; }
+  .project.featured { grid-column: auto; }
+  .project.featured .project-name { font-size: 1.45rem; }
+  .project { padding: 1.4rem; }
+  .project-footer { flex-direction: column; align-items: flex-start; }
+
   .edu-card { grid-template-columns: 1fr; }
-  .edu-side { text-align: left; }
+  .edu-main { padding: 1.5rem; }
+  .edu-side { padding: 1.5rem; border-left: none; border-top: 1px solid var(--border); flex-direction: row; justify-content: flex-start; gap: 3rem; }
+
+  .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .contact-form { padding: 1.25rem; }
+}
+
+@media (max-width: 600px) {
+  .ach-grid { grid-template-columns: 1fr; }
+  .ach-card:last-child:nth-child(odd) { grid-column: auto; }
+  .section-meta { display: none; }
+  .contact-links a { grid-template-columns: 64px 1fr auto; }
+  .footer-inner { flex-direction: column; gap: 0.4rem; }
 }

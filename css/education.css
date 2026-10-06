@@ -1,13 +1,39 @@
-/* education.css — Education section */
+/* education.css — Education card */
 
-.edu-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 2.5rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
-.edu-school { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
-.edu-degree { font-size: 0.875rem; color: var(--muted); margin-bottom: 1.25rem; }
-.edu-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
-.edu-tag { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.08em; padding: 0.2rem 0.55rem; border-radius: 3px; border: 1px solid var(--border); color: var(--grey); background: var(--bg3); }
-.edu-details { font-size: 0.82rem; color: var(--muted); line-height: 1.8; }
-.edu-details strong { color: var(--text); font-weight: 500; }
-.edu-side { text-align: right; }
-.edu-gpa-num { font-size: 3.5rem; font-weight: 700; letter-spacing: -0.03em; background: linear-gradient(120deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 0.2rem; }
-.edu-gpa-label { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
-.edu-year { font-family: var(--font-mono); font-size: 0.63rem; color: var(--muted); margin-top: 1.25rem; letter-spacing: 0.06em; }
+.edu-card {
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.edu-main { padding: 2rem; }
+.edu-school { font-size: 1.4rem; font-weight: 600; letter-spacing: -0.02em; }
+.edu-degree { font-size: 1rem; color: var(--text2); margin-top: 0.15rem; }
+.edu-minor { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-top: 0.35rem; }
+
+.edu-block { margin-top: 1.6rem; }
+.edu-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); margin-bottom: 0.6rem; }
+.edu-details { font-size: 0.9rem; line-height: 1.8; color: var(--text2); }
+
+.edu-side {
+  padding: 2rem;
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.edu-side .edu-label { margin: 0.35rem 0 0; }
+
+.edu-gpa-num {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+.edu-gpa-num span { font-size: 1rem; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-left: 0.25rem; }
+
+.edu-grad { font-size: 1.15rem; font-weight: 600; letter-spacing: -0.01em; }

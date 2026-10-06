@@ -4,17 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vaidic Soni — Software Engineer</title>
+  <meta name="description" content="Vaidic Soni — software engineer and Computer Science student at Texas State University. Data pipelines, AI backends, full-stack and iOS." />
+  <meta name="theme-color" content="#0a0b0d" />
+  <meta property="og:title" content="Vaidic Soni — Software Engineer" />
+  <meta property="og:description" content="Data pipelines, AI backends, and the web and iOS apps on top of them." />
+  <meta property="og:image" content="assets/headshot.jpg" />
   <link rel="icon" type="image/png" href="assets/bug.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/skills.css" />
   <link rel="stylesheet" href="css/experience.css" />
   <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/skills.css" />
   <link rel="stylesheet" href="css/education.css" />
   <link rel="stylesheet" href="css/achievements.css" />
   <link rel="stylesheet" href="css/contact.css" />
@@ -23,329 +30,503 @@
 </head>
 <body>
 
-  <!-- Animated Background -->
-  <div class="bg-canvas">
-    <div class="particles" id="particles"></div>
-  </div>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
 
   <!-- Navigation -->
   <nav id="main-nav">
-    <div class="nav-left">
-      <a href="#" class="nav-logo">VS</a>
-      <div class="nav-divider"></div>
-      <div class="nav-meta"><span>//</span> CS @ Texas State &nbsp;·&nbsp; Class of 2027</div>
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo"><span class="accent">~/</span>vaidic-soni</a>
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#experience">experience</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#education">education</a></li>
+        <li><a href="#activities">activities</a></li>
+        <li><a href="#awards">awards</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
     </div>
-    <div class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#campus-activities">Campus</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#achievements">Awards</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
   </nav>
 
   <!-- Hero -->
-  <section id="hero">
-    <div class="hero-eyebrow">Software Engineer · CS @ Texas State University</div>
-    <h1 class="hero-name">
-      <span class="hi">Vaidic</span><br /><span class="lo">Soni</span>
-    </h1>
-    <p class="hero-tagline">
-      I build the part of the product users notice the moment <strong>it's broken.</strong>
-      
-    </p>
-    <div class="hero-pills">
-      <span class="hero-pill pill-blue">Full Stack</span>
-      <span class="hero-pill">iOS / Swift</span>
-      <span class="hero-pill">Data Engineering</span>
+  <header id="top" class="hero">
+    <div class="hero-text">
+      <p class="hero-prompt"><span class="accent">$</span> whoami<span class="cursor" aria-hidden="true"></span></p>
+      <h1 class="hero-name">Vaidic Soni</h1>
+      <p class="hero-role"><span>Software Engineer Intern @ The Launch Box</span> <span class="sep">/</span> <span>CS @ Texas State '27</span></p>
+      <p class="hero-tagline">
+        I build the part of the product users notice the moment <strong>it's broken</strong> — data pipelines,
+        AI backends, and the web and iOS apps that sit on top of them.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See my work</a>
+        <a href="#contact" class="btn">Get in touch</a>
+      </div>
+      <ul class="hero-links">
+        <li><a href="https://github.com/VaidicSoni" target="_blank" rel="noopener">github ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/vaidicsoni" target="_blank" rel="noopener">linkedin ↗</a></li>
+      </ul>
     </div>
-    <div class="hero-meta">
-      <a href="mailto:wse11@txstate.edu">wse11@txstate.edu</a>
-      <a href="https://linkedin.com/in/vaidic-soni1004" target="_blank">LinkedIn ↗</a>
-      <a href="https://github.com/VaidicSoni" target="_blank">GitHub ↗</a>
-      <span>San Marcos, TX</span>
-    </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2 class="section-title"><span>Skills</span></h2>
-    <div class="skills-categories">
-      <div class="skill-category cat-lang reveal">
-        <div class="skill-category-title">Languages</div>
-        <div class="orbit-track"><div class="orbit-pad"><div class="orbit-inner" id="lang-orbit"></div></div></div>
+    <figure class="hero-photo">
+      <div class="photo-frame">
+        <img src="assets/headshot.jpg" alt="Portrait of Vaidic Soni" width="800" height="986" />
       </div>
-      <div class="skill-category cat-frame reveal">
-        <div class="skill-category-title">Frameworks & Platforms</div>
-        <div class="orbit-track"><div class="orbit-pad"><div class="orbit-inner rev" id="frame-orbit"></div></div></div>
-      </div>
-      <div class="skill-category cat-tools reveal">
-        <div class="skill-category-title">Tools & DevOps</div>
-        <div class="orbit-track"><div class="orbit-pad"><div class="orbit-inner" id="tools-orbit"></div></div></div>
-      </div>
-      <div class="skill-category cat-concepts reveal">
-        <div class="skill-category-title">Concepts</div>
-        <div class="orbit-track"><div class="orbit-pad"><div class="orbit-inner rev" id="concepts-orbit"></div></div></div>
-      </div>
-    </div>
-  </section>
+      <figcaption>
+        <dl class="spec">
+          <div><dt>role</dt><dd>SWE Intern @ The Launch Box</dd></div>
+          <div><dt>based</dt><dd>Austin, TX</dd></div>
+          <div><dt>school</dt><dd>Texas State · May 2027</dd></div>
+          <div><dt>status</dt><dd><span class="status-dot" aria-hidden="true"></span>open to opportunities</dd></div>
+        </dl>
+      </figcaption>
+    </figure>
+  </header>
+
 
   <!-- Experience -->
   <section id="experience">
-    <h2 class="section-title"><span>Experience</span></h2>
-    <div class="exp-timeline">
-      <div class="exp-item reveal">
+    <div class="section-head">
+      <span class="section-index">01</span>
+      <h2 class="section-title">Experience</h2>
+      <span class="section-meta">2 roles</span>
+    </div>
+    <div class="exp-list">
+
+      <article class="exp-item reveal">
+        <div class="exp-left">
+          <div class="exp-dates">Aug 2026 — <span class="now">Present</span></div>
+          <div class="exp-location">Austin, TX</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-head">
+            <h3 class="exp-company">The Launch Box</h3>
+            <span class="exp-role">Software Engineer Intern</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Design and develop internal dashboards and financial tools that centralize company data, improve visibility into key metrics,
+and support financial analysis, reporting, and operational decision-making.</li>
+            <li>Build automated data pipelines and workflows using Apache Airflow and DAGs to extract, transform, and integrate data from platforms such as BambooHR and Kantata into centralized internal systems.</li>
+            <li>Develop cloud-based automation and AI-powered solutions using Microsoft Azure, integrating data from multiple business sources to streamline processes, reduce manual work, and create more efficient internal tools.</li>
+          </ul>
+          <ul class="tag-list">
+            <li>Apache Airflow</li>
+            <li>Python</li>
+            <li>Microsoft Azure</li>
+            <li>ETL</li>
+            <li>Dashboards</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp-item reveal">
         <div class="exp-left">
           <div class="exp-dates">Jun 2022 — Jun 2023</div>
-          <div class="exp-company">Pink Flower HSS</div>
           <div class="exp-location">Indore, India</div>
         </div>
         <div class="exp-right">
-          <div class="exp-role">Full Stack Developer</div>
+          <div class="exp-head">
+            <h3 class="exp-company">Pink Flower Higher Secondary School</h3>
+            <span class="exp-role">Full Stack Developer</span>
+          </div>
           <ul class="exp-bullets">
-            <li>Built a student performance portal with Python (Flask) and SQL, enabling real-time access to academic records and analytics for teachers and staff.</li>
-            <li>Designed ETL pipelines to integrate third-party edtech data into the school's centralized system.</li>
-            <li>Developed interactive Power BI dashboards for administrators to track assessments and generate reports.</li>
-            <li>Optimized backend queries and caching logic, cutting report generation time by 40%.</li>
+            <li>Built a student performance portal with Python (Flask) and SQL, giving real-time access to academic records and analytics.</li>
+            <li>Designed and implemented ETL pipelines to integrate third-party edtech data into the school's centralized system.</li>
+            <li>Developed Power BI dashboards and responsive web pages for administrators to track assessments and generate reports.</li>
+            <li>Optimized backend queries and caching, cutting report generation time by 40% for teachers and staff.</li>
+          </ul>
+          <ul class="tag-list">
+            <li>Python</li>
+            <li>Flask</li>
+            <li>SQL</li>
+            <li>Power BI</li>
+            <li>ETL</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Campus Activities -->
-  <section id="campus-activities">
-    <h2 class="section-title"><span>Campus Activities</span></h2>
-    <div class="exp-timeline">
-
-      <div class="exp-item reveal">
-        <div class="exp-left">
-          <div class="exp-dates">Mar 2026 — Present</div>
-          <div class="exp-company">Adobe</div>
-          <div class="exp-location">Texas State University</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-role">Student Ambassador</div>
-          <ul class="exp-bullets">
-            <li>Represent Adobe on campus by advocating for creative software solutions and driving student engagement with Adobe Creative Cloud products.</li>
-            <li>Facilitate workshops and demonstrations to help peers leverage design tools for academic and professional projects.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-left">
-          <div class="exp-dates">Aug 2024 — Present</div>
-          <div class="exp-company">Texas State University</div>
-          <div class="exp-location">Housing & Residential Life</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-role">Resident Assistant</div>
-          <ul class="exp-bullets">
-            <li>Supervise and support a residence hall floor of 35+ students, serving as a 24/7 emergency contact and immediate resource.</li>
-            <li>Plan, market, and execute community-building programs—including a Cibolo Hall Speed Chess tournament and "Waitlist Wake" registration events—to foster a collaborative living environment.</li>
-            <li>Maintain certifications in CPR and rigorous training in trauma detection, crisis management, and emergency response.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-left">
-          <div class="exp-dates">Jan 2024 — May 2024</div>
-          <div class="exp-company">Texas State University</div>
-          <div class="exp-location">LBJ Student Center</div>
-        </div>
-        <div class="exp-right">
-          <div class="exp-role">Information Desk Assistant</div>
-          <ul class="exp-bullets">
-            <li>Streamlined front-desk operations by executing administrative tasks such as data entry, filing, and document preparation.</li>
-            <li>Acted as the primary point of contact for campus visitors, providing accurate routing and information regarding university services, facilities, and events.</li>
-          </ul>
-        </div>
-      </div>
+      </article>
 
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects">
-    <h2 class="section-title"><span>Projects</span></h2>
-    <div class="projects-grid">
+    <div class="section-head">
+      <span class="section-index">02</span>
+      <h2 class="section-title">Projects</h2>
+      <span class="section-meta">5 builds</span>
+    </div>
+    <div class="project-list">
 
-      <div class="project-card reveal">
-        <div class="project-num">01</div>
-        <div class="project-badge badge-gold">Google Maps Hackathon Winner — Top 16 / 4,000+ teams</div>
-        <div class="project-name">MagiCart</div>
-        <p class="project-desc">A grocery price-comparison engine with location-aware shopping and personalised diet recommendations. Serverless functions and batched API calls slashed query latency by ~30%.</p>
+      <article class="project featured reveal">
+        <div class="project-top"><span>01</span><span>web · geospatial</span></div>
+        <h3 class="project-name">MagiCart</h3>
+        <div class="project-badge">Google Maps Platform Awards — 16 winners / 4,000+ teams</div>
+        <p class="project-desc">A grocery price-comparison engine with geospatial queries, authentication, and personalized diet recommendations. It plans efficient multi-stop shopping routes around each user's work-to-home commute and tracks savings in real time.</p>
+        <dl class="project-metrics">
+          <div><dt>~30%</dt><dd>lower query latency via serverless + batched requests</dd></div>
+          <div><dt>Top 16</dt><dd>of 4,000+ teams</dd></div>
+        </dl>
         <div class="project-footer">
-          <div class="project-stack">
-            <span class="stack-chip">TypeScript</span>
-            <span class="stack-chip">Google Maps API</span>
-            <span class="stack-chip">Firebase</span>
-            <span class="stack-chip">Supabase</span>
-            <span class="stack-chip">Tailwind CSS</span>
-          </div>
-          <a href="https://github.com/Meidad-T/MagiCart-AI" target="_blank" class="project-link">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
+          <ul class="tag-list">
+            <li>TypeScript</li>
+            <li>Tailwind CSS</li>
+            <li>Firebase</li>
+            <li>PostgreSQL</li>
+            <li>Supabase</li>
+            <li>Google Maps API</li>
+          </ul>
+          <a href="https://github.com/Meidad-T/MagiCart-AI" target="_blank" rel="noopener" class="project-link">source ↗</a>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-num">02</div>
-        <div class="project-name">Brush</div>
-        <p class="project-desc">A SwiftUI social drawing app with a 24-hour ephemeral feed — friends share artwork that vanishes by end of day. Powered by real-time Firestore sync, friend-based access control, and atomic image uploads.</p>
+      <article class="project reveal">
+        <div class="project-top"><span>02</span><span>ai · backend</span></div>
+        <h3 class="project-name">AI Teaching Assistant</h3>
+        <p class="project-desc">A multi-course AI backend running a locally hosted Llama 3.2, with a RAG ingestion pipeline for course materials and a relational schema for course mapping that uses optimistic concurrency control to prevent data corruption.</p>
+        <dl class="project-metrics">
+          <div><dt>~550 RPS</dt><dd>12,000 requests, 32 clients</dd></div>
+          <div><dt>47</dt><dd>regression tests</dd></div>
+        </dl>
         <div class="project-footer">
-          <div class="project-stack">
-            <span class="stack-chip">Swift</span>
-            <span class="stack-chip">SwiftUI</span>
-            <span class="stack-chip">Firebase</span>
-            <span class="stack-chip">Firestore</span>
-            <span class="stack-chip">Metal</span>
-          </div>
-          <a href="https://github.com/VaidicSoni/bRUSH" target="_blank" class="project-link">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
+          <ul class="tag-list">
+            <li>Python</li>
+            <li>Flask</li>
+            <li>MySQL</li>
+            <li>SQLAlchemy</li>
+            <li>PyTorch</li>
+            <li>Llama 3.2</li>
+            <li>LlamaIndex</li>
+            <li>pytest</li>
+          </ul>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-num">03</div>
-        <div class="project-name">Weather Anytime</div>
-        <p class="project-desc">A desktop weather application with real-time updates, location-based search, and a dynamic emoji-driven UI. Built with PyQt5 and OpenWeather API with robust error handling throughout.</p>
+      <article class="project reveal">
+        <div class="project-top"><span>03</span><span>ios · realtime</span></div>
+        <h3 class="project-name">Brush</h3>
+        <p class="project-desc">A daily social drawing feed. Atomic image uploads and metadata stay in sync in real time across users and devices, while friend-based access control and relational document references build each personalized feed.</p>
+        <dl class="project-metrics">
+          <div><dt>Real-time</dt><dd>sync across users &amp; devices</dd></div>
+          <div><dt>Friends-only</dt><dd>access control per feed</dd></div>
+        </dl>
         <div class="project-footer">
-          <div class="project-stack">
-            <span class="stack-chip">Python</span>
-            <span class="stack-chip">PyQt5</span>
-            <span class="stack-chip">OpenWeather API</span>
-          </div>
-          <a href="https://github.com/VaidicSoni/Weather-Anytime" target="_blank" class="project-link">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
+          <ul class="tag-list">
+            <li>Swift</li>
+            <li>SwiftUI</li>
+            <li>Firebase</li>
+            <li>TypeScript</li>
+            <li>Metal</li>
+          </ul>
+          <a href="https://github.com/VaidicSoni/bRUSH" target="_blank" rel="noopener" class="project-link">source ↗</a>
         </div>
-      </div>
+      </article>
 
-      <div class="project-card reveal">
-        <div class="project-num">04</div>
-        <div class="project-badge">Amazon × CodePath Design Challenge</div>
-        <div class="project-name">Flipp Redesign</div>
-        <p class="project-desc">Redesigned Flipp's platform for government benefit recipients with clear cost-comparison across delivery, pickup, and in-store modes. Prototyped in Figma alongside Amazon designers.</p>
+      <article class="project reveal">
+        <div class="project-top"><span>04</span><span>desktop</span></div>
+        <h3 class="project-name">Weather Anytime</h3>
+        <p class="project-desc">A real-time desktop weather app with location search and dynamic condition visualization. API requests, response parsing, validation, and error handling are built as reusable components.</p>
         <div class="project-footer">
-          <div class="project-stack">
-            <span class="stack-chip">Figma</span>
-            <span class="stack-chip">Google Stitch AI</span>
-            <span class="stack-chip">UX Design</span>
-          </div>
-          <a href="https://github.com/KelvinMathew2004/AmazonNext-Design-Challenge" target="_blank" class="project-link">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-            GitHub
-          </a>
+          <ul class="tag-list">
+            <li>Python</li>
+            <li>PyQt5</li>
+            <li>OpenWeather API</li>
+          </ul>
+          <a href="https://github.com/VaidicSoni/Weather-Anytime" target="_blank" rel="noopener" class="project-link">source ↗</a>
         </div>
-      </div>
+      </article>
 
+      <article class="project reveal">
+        <div class="project-top"><span>05</span><span>ux · design</span></div>
+        <h3 class="project-name">Flipp Redesign</h3>
+        <div class="project-badge badge-plain">Amazon × CodePath Design Challenge</div>
+        <p class="project-desc">Redesigned Flipp's platform for government benefit recipients, with clear cost comparison across delivery, pickup, and in-store. Prototyped in Figma alongside Amazon designers.</p>
+        <div class="project-footer">
+          <ul class="tag-list">
+            <li>Figma</li>
+            <li>Google Stitch AI</li>
+            <li>UX Design</li>
+          </ul>
+          <a href="https://github.com/KelvinMathew2004/AmazonNext-Design-Challenge" target="_blank" rel="noopener" class="project-link">source ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-head">
+      <span class="section-index">03</span>
+      <h2 class="section-title">Skills</h2>
+      <span class="section-meta">stack.json</span>
+    </div>
+    <div class="skills-table">
+      <div class="skill-row reveal">
+        <div class="skill-key">languages</div>
+        <ul class="tag-list">
+          <li>Python</li>
+          <li>Java</li>
+          <li>C++</li>
+          <li>TypeScript</li>
+          <li>JavaScript</li>
+          <li>Swift</li>
+          <li>SQL</li>
+          <li>Assembly</li>
+        </ul>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-key">ai / data</div>
+        <ul class="tag-list">
+          <li>PyTorch</li>
+          <li>Hugging Face</li>
+          <li>RAG</li>
+          <li>LlamaIndex</li>
+          <li>Apache Airflow</li>
+          <li>PostgreSQL</li>
+          <li>Power BI</li>
+          <li>Power Query</li>
+        </ul>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-key">web / mobile</div>
+        <ul class="tag-list">
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Flask</li>
+          <li>Tailwind CSS</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Firebase</li>
+          <li>Metal</li>
+        </ul>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-key">cloud / tools</div>
+        <ul class="tag-list">
+          <li>Azure</li>
+          <li>Docker</li>
+          <li>CI/CD</li>
+          <li>Git</li>
+          <li>Bitbucket</li>
+          <li>Jira</li>
+          <li>Linux</li>
+          <li>Figma</li>
+        </ul>
+      </div>
+      <div class="skill-row reveal">
+        <div class="skill-key">testing</div>
+        <ul class="tag-list">
+          <li>pytest</li>
+          <li>unittest</li>
+          <li>JUnit</li>
+          <li>Load testing</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Education -->
   <section id="education">
-    <h2 class="section-title"><span>Education</span></h2>
+    <div class="section-head">
+      <span class="section-index">04</span>
+      <h2 class="section-title">Education</h2>
+    </div>
     <div class="edu-card reveal">
       <div class="edu-main">
-        <div class="edu-school">Texas State University</div>
-        <div class="edu-degree">B.S. Computer Science · Minor: Applied Mathematics, Data Analytics</div>
-        <div class="edu-tags">
-          <span class="edu-tag">Dean's List</span>
-          <span class="edu-tag">President's List</span>
-          <span class="edu-tag">CS Scholarship</span>
-          <span class="edu-tag">Achievement Scholarship</span>
-          <span class="edu-tag">Lunelle Anderson Scholarship</span>
-          <span class="edu-tag">Don & Helen Cude Endowed</span>
+        <h3 class="edu-school">Texas State University</h3>
+        <div class="edu-degree">B.S. Computer Science</div>
+        <div class="edu-minor">minors: Applied Mathematics, Data Analytics</div>
+
+        <div class="edu-block">
+          <div class="edu-label">honors</div>
+          <ul class="tag-list">
+            <li>President's List</li>
+            <li>Dean's List</li>
+            <li>Texas State Achievement Scholarship</li>
+            <li>Computer Science Scholarship</li>
+            <li>Lunelle Anderson Scholarship</li>
+            <li>Don &amp; Helen Cude CS Endowed Scholarship</li>
+          </ul>
         </div>
-        <div class="edu-details">
-          <strong>Coursework:</strong> DSA · Algorithm Analysis · Data Mining · Software Engineering · Computer Architecture · OOP · Discrete Math · Assembly Language
+
+        <div class="edu-block">
+          <div class="edu-label">coursework</div>
+          <p class="edu-details">Data Structures &amp; Algorithms · Object-Oriented Programming · Software Engineering · Computer Architecture · Algorithm Analysis · Data Mining · Discrete Math · Assembly Language</p>
         </div>
       </div>
       <div class="edu-side">
-        <div class="edu-gpa-num">3.97</div>
-        <div class="edu-gpa-label">GPA / 4.0</div>
-        <div class="edu-year">Class of 2027</div>
+        <div>
+          <div class="edu-gpa-num">3.97<span>/4.0</span></div>
+          <div class="edu-label">gpa</div>
+        </div>
+        <div>
+          <div class="edu-grad">May 2027</div>
+          <div class="edu-label">expected graduation</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Achievements -->
-  <section id="achievements">
-    <h2 class="section-title"><span>Awards & Certifications</span></h2>
+  <!-- Activities -->
+  <section id="activities">
+    <div class="section-head">
+      <span class="section-index">05</span>
+      <h2 class="section-title">Activities</h2>
+      <span class="section-meta">campus</span>
+    </div>
+    <div class="exp-list compact">
+
+      <article class="exp-item reveal">
+        <div class="exp-left">
+          <div class="exp-dates">Apr 2026 — <span class="now">Present</span></div>
+          <div class="exp-location">Texas State</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-head">
+            <h3 class="exp-company">Google Developer Groups</h3>
+            <span class="exp-role">Member</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Collaborate on AI projects using Python, Git, and Docker, exploring algorithms, system design, and machine learning.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp-item reveal">
+        <div class="exp-left">
+          <div class="exp-dates">Mar 2026 — <span class="now">Present</span></div>
+          <div class="exp-location">Texas State</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-head">
+            <h3 class="exp-company">Adobe</h3>
+            <span class="exp-role">Student Ambassador</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Lead campus engagement through technical workshops, hackathons, and student outreach, representing Adobe's developer and creative ecosystem.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp-item reveal">
+        <div class="exp-left">
+          <div class="exp-dates">Aug 2024 — <span class="now">Present</span></div>
+          <div class="exp-location">Housing &amp; Residential Life</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-head">
+            <h3 class="exp-company">Texas State University</h3>
+            <span class="exp-role">Resident Assistant</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Support a residence hall floor of 35+ students as a 24/7 point of contact, and run community programs like a speed chess tournament and registration events.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp-item reveal">
+        <div class="exp-left">
+          <div class="exp-dates">Jan 2024 — May 2024</div>
+          <div class="exp-location">LBJ Student Center</div>
+        </div>
+        <div class="exp-right">
+          <div class="exp-head">
+            <h3 class="exp-company">Texas State University</h3>
+            <span class="exp-role">Information Desk Assistant</span>
+          </div>
+          <ul class="exp-bullets">
+            <li>Handled front-desk operations and data entry, and served as the first point of contact for campus visitors.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards">
+    <div class="section-head">
+      <span class="section-index">06</span>
+      <h2 class="section-title">Awards &amp; Certifications</h2>
+    </div>
     <div class="ach-grid">
-      <div class="ach-card reveal" data-num="01">
-        <div class="ach-org">Google · 2024</div>
-        <div class="ach-title">Google Maps Platform Hackathon</div>
-        <div class="ach-desc">Selected as one of 16 winning teams out of 4,000+ global participants for MagiCart — a location-aware grocery price-comparison engine.</div>
+      <div class="ach-card reveal">
+        <div class="ach-top"><span>01</span><span class="ach-org">Google</span></div>
+        <h3 class="ach-title">Google Maps Platform Awards</h3>
+        <p class="ach-desc">One of 16 winning teams out of 4,000+ for MagiCart, a location-aware grocery price-comparison engine.</p>
       </div>
-      <div class="ach-card reveal" data-num="02">
-        <div class="ach-org">Amazon · CodePath</div>
-        <div class="ach-title">Amazon × CodePath Design Challenge</div>
-        <div class="ach-desc">Collaborated with Amazon designers to redesign Flipp's platform for government benefit recipients using Figma and Google Stitch AI pipelines.</div>
+      <div class="ach-card reveal">
+        <div class="ach-top"><span>02</span><span class="ach-org">Goldman Sachs</span></div>
+        <h3 class="ach-title">Software Engineering Virtual Experience</h3>
+        <p class="ach-desc">Simulated backend development using Git and Agile practices, focused on scalable software architecture.</p>
       </div>
-      <div class="ach-card reveal" data-num="03">
-        <div class="ach-org">Goldman Sachs</div>
-        <div class="ach-title">Software Engineering Virtual Experience</div>
-        <div class="ach-desc">Simulated backend development using Git and Agile practices, focused on building scalable software architecture.</div>
+      <div class="ach-card reveal">
+        <div class="ach-top"><span>03</span><span class="ach-org">UC San Diego</span></div>
+        <h3 class="ach-title">Algorithms &amp; Data Structures</h3>
+        <p class="ach-desc">Certified in algorithmic problem-solving: recursion, dynamic programming, and graph theory.</p>
       </div>
-      <div class="ach-card reveal" data-num="04">
-        <div class="ach-org">UC San Diego</div>
-        <div class="ach-title">Algorithms & Data Structures</div>
-        <div class="ach-desc">Certified in algorithmic problem-solving covering recursion, dynamic programming, and graph theory through hands-on coding.</div>
+      <div class="ach-card reveal">
+        <div class="ach-top"><span>04</span><span class="ach-org">Texas State</span></div>
+        <h3 class="ach-title">President's List &amp; Dean's List</h3>
+        <p class="ach-desc">Recognized on both lists for academic performance throughout the program.</p>
       </div>
-      <div class="ach-card reveal" data-num="05">
-        <div class="ach-org">Texas State University · All Semesters</div>
-        <div class="ach-title">President's List & Dean's List</div>
-        <div class="ach-desc">Maintained academic excellence every semester — recognised on both the Dean's List and President's List throughout the programme.</div>
-      </div>
-      <div class="ach-card reveal" data-num="06">
-        <div class="ach-org">Texas State University</div>
-        <div class="ach-title">4× Scholarship Recipient</div>
-        <div class="ach-desc">Awarded the Texas State Achievement, Computer Science, Lunelle Anderson, and Don & Helen Cude CS Endowed Scholarships.</div>
+      <div class="ach-card reveal">
+        <div class="ach-top"><span>05</span><span class="ach-org">Texas State</span></div>
+        <h3 class="ach-title">4× Scholarship Recipient</h3>
+        <p class="ach-desc">Texas State Achievement, Computer Science, Lunelle Anderson, and Don &amp; Helen Cude CS Endowed Scholarships.</p>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
+    <div class="section-head">
+      <span class="section-index">07</span>
+      <h2 class="section-title">Contact</h2>
+    </div>
     <div class="contact-inner">
       <div class="contact-text">
-        <h2>Let's work<br /><span>together.</span></h2>
-        <p>Open to software engineering internships, research roles, and interesting projects. If you're building something ambitious, I'd love to hear about it.</p>
-        <div class="contact-links-list">
-          <a href="mailto:wse11@txstate.edu" class="contact-link">→ wse11@txstate.edu</a>
-          <a href="https://linkedin.com/in/vaidic-soni1004" target="_blank" class="contact-link">→ linkedin.com/in/vaidic-soni1004</a>
+        <p class="contact-title">Have a role or a project in mind?</p>
+        <p class="contact-lede">I'm open to software engineering roles, research, and interesting projects. Email is the fastest way to reach me.</p>
+        <ul class="contact-links">
+          <li><a href="mailto:soni.vaidic3010@gmail.com"><span class="k">email</span><span class="v">soni.vaidic3010@gmail.com</span><span class="arrow">→</span></a></li>
+          <li><a href="https://www.linkedin.com/in/vaidicsoni" target="_blank" rel="noopener"><span class="k">linkedin</span><span class="v">in/vaidicsoni</span><span class="arrow">↗</span></a></li>
+          <li><a href="https://github.com/VaidicSoni" target="_blank" rel="noopener"><span class="k">github</span><span class="v">VaidicSoni</span><span class="arrow">↗</span></a></li>
+        </ul>
+      </div>
+      <form class="contact-form" id="contact-form" data-to="soni.vaidic3010@gmail.com">
+        <div class="field">
+          <label for="cf-name">name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" />
         </div>
-      </div>
-      <div class="contact-form">
-        <input type="text" placeholder="Your name" />
-        <input type="email" placeholder="Your email" />
-        <textarea rows="5" placeholder="What are you working on?"></textarea>
-        <button type="button">Send message →</button>
-      </div>
+        <div class="field">
+          <label for="cf-message">message</label>
+          <textarea id="cf-message" name="message" rows="6" placeholder="What are you working on?" required></textarea>
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <span class="form-note">opens your mail app</span>
+        </div>
+      </form>
     </div>
   </section>
 
-  <footer>© 2025 Vaidic Soni</footer>
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Vaidic Soni</span>
+      <span>hand-written HTML, CSS &amp; JS — no frameworks</span>
+      <a href="#top">back to top ↑</a>
+    </div>
+  </footer>
 
-  <script src="js/particles.js"></script>
-  <script src="js/skills.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/reveal.js"></script>
+  <script src="js/contact.js"></script>
 
 </body>
 </html>

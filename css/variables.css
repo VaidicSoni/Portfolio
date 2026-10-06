@@ -2,24 +2,32 @@
 
 :root {
   /* Background layers */
-  --bg:       #080a10;
-  --bg2:      #0e1119;
-  --bg3:      #141822;
+  --bg:         #0a0b0d;
+  --bg2:        #101114;
+  --bg3:        #16181c;
 
   /* Borders */
-  --border:   #1e2535;
-  --border2:  #2a3448;
+  --border:     #212329;
+  --border2:    #2e3138;
 
   /* Text */
-  --text:     #c4cfe6;
-  --muted:    #5a6a85;
-  --grey:     #8a96aa;
+  --text:       #e8e8e4;
+  --text2:      #a8aab0;
+  --muted:      #7d818a;
 
-  /* Accent */
-  --accent:   #5b8db8;
-  --accent2:  #7ab0d4;
+  /* Accent — one signal color, used sparingly */
+  --accent:     #b8f25c;
+  --accent-ink: #0a0b0d;
+  --accent-dim: rgba(184, 242, 92, 0.12);
+  --gold:       #f2c14e;
 
   /* Typography */
-  --font-disp: 'Space Grotesk', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --font-sans:  'Geist', system-ui, -apple-system, sans-serif;
+  --font-mono:  'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Layout */
+  --maxw:       1120px;
+  --gutter:     2.5rem;
+  --nav-h:      56px;
+  --radius:     2px;
 }

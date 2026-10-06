@@ -6,7 +6,7 @@ Personal portfolio website built with HTML, CSS, and Vanilla JavaScript.
 * HTML5
 * CSS3 (Custom properties, CSS Grid/Flexbox)
 * Vanilla JavaScript (ES6)
-* Devicon (Icons)
+* Geist / Geist Mono (Google Fonts)
 
 ## Setup & Running Locally
 1. Clone the repository.
@@ -17,8 +17,9 @@ Personal portfolio website built with HTML, CSS, and Vanilla JavaScript.
 ## File Structure
 * `index.html`: Main entry point.
 * `css/`: Modular stylesheets (`variables.css`, `base.css`, `projects.css`, `responsive.css`, etc.).
-* `js/`: Modular scripts (`particles.js`, `skills.js`, `nav.js`, `reveal.js`).
+* `assets/`: Favicon and headshot.
+* `js/`: Modular scripts (`nav.js`, `reveal.js`, `contact.js`).
 
 ## Contact
 * **Email:** wse11@txstate.edu
-* **LinkedIn:** linkedin.com/in/vaidic-soni1004
+* **LinkedIn:** linkedin.com/in/vaidicsoni
